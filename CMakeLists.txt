@@ -12,5 +12,7 @@ add_definitions(${LLVM_DEFINITIONS})
 include_directories(${LLVM_INCLUDE_DIRS})
 link_directories(${LLVM_LIBRARY_DIRS})
 
+include_directories(include)
+
 # Add pass plugin
-add_llvm_pass_plugin(MyPass src/MyPass.cpp)
+add_llvm_pass_plugin(MyPass lib/MyPass.cpp)
